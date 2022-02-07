@@ -1,0 +1,40 @@
+<mat-card>
+    <div class="row">
+        <div class="col-sm-2 thumbnail">
+            <a [href]="imageLocation" target="_blank">
+                <img [src]="thumbnailLocation" />
+            </a>
+        </div> 
+        <div class="col-sm-8">
+            <div class="imageNameContainer">
+                <span *ngIf="editMode">
+                    <form [formGroup]="renameForm" (ngSubmit)="renameImage()">
+                        
+                        <mat-form-field appearance="fill">
+                            <mat-label>New Image Name</mat-label>
+                            <input matInput placeholder="{{image.name}}" formControlName="newName">
+                        </mat-form-field>
+                    
+                        <button type="submit" mat-icon-button color="primary" aria-label="Submit new name" [disabled]="!renameForm.valid">
+                            <mat-icon>check_circle</mat-icon>
+                        </button>
+                        <button mat-icon-button aria-label="Cancel changing name" (click)="triggerEditMode()">
+                            <mat-icon>cancel</mat-icon>
+                        </button>
+                    </form>
+                </span>
+                <span *ngIf="!editMode">
+                    <h2 class="imageName">{{ image.name }}</h2>
+                    <button mat-icon-button aria-label="Edit the image name" (click)="triggerEditMode()" class="editIcon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <button mat-raised-button color="warn" aria-label="Delete the image" (click)="deleteImage()" class="deleteButton">
+                Delete <mat-icon>delete_forever</mat-icon>
+            </button>
+        </div>
+    </div>    
+</mat-card>

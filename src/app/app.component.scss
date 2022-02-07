@@ -1,0 +1,51 @@
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    font-weight: 600;
+}
+
+.toolbar img {
+    margin: 0 16px;
+    width: 220px;
+}
+
+.wrapper {
+    background-color: #bfb8b8;
+}
+
+.content {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 200px; 
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+
+footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+

@@ -1,0 +1,15 @@
+<div class="row header between-xs">
+    <span class="col-xs"><h1>Fieldwire Images</h1></span>
+    <span class="col-xs">
+      <span class="addButton">
+        <input #fileInput hidden="true" type="file" onclick="this.value=null" (change)="addImage($event)" accept="image/*"/>
+        <button mat-raised-button (click)="fileInput.click()">Add</button>
+      </span>
+    </span>
+</div>
+<div class="image-list">
+  <div *ngFor="let image of images">
+    <app-image-item [image]="image" (delete)="deleteImage($event)"></app-image-item><br>
+  </div>
+</div>
+  

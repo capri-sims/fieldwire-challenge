@@ -1,0 +1,28 @@
+mat-card {
+    padding: 30px;
+}
+
+.thumbnail {
+    vertical-align: middle;
+}
+
+.imageNameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageName {
+    display: inline-block;
+    padding-right: 10px; 
+    vertical-align: sub;
+}
+
+.editIcon {
+    vertical-align: middle;
+}
+
+.deleteButton {
+    float: right; 
+    background-color: #D7182A; 
+}
